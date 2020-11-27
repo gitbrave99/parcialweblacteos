@@ -1,0 +1,205 @@
+		.flip-box {
+			width: 100%;
+			height: 80vh;
+			perspective: 1000px;
+		}
+
+		.flip-box-inner {
+			position: relative;
+			width: 100%;
+			height: 80vh;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		.flip-box:hover .flip-box-inner {
+			transform: rotateY(180deg);
+		}
+
+		.flip-box-front, .flip-box-back {
+			position: absolute;
+			width: 100%;
+			height: 80vh;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.flip-box-front {
+			background-color: red;
+			color: black;
+			height: 80vh;
+		}
+
+		.flip-box-back {
+			background-color: dodgerblue;
+			color: white;
+			height: 80vh;
+			transform: rotateY(180deg);
+		}
+		#jumbo_img_front{
+			background-image: url(https://cdn.hispantv.com/hispanmedia/files/images/thumbnail/20190709/1340323_xl.jpg);
+			background-repeat: no-repeat;
+			color:white; 
+			background-size: 100% 100%;
+			height: 80vh;
+		}
+		#jumbo_img_back{
+			background-image: url(https://as.com/deporteyvida/imagenes/2019/05/29/portada/1559132933_784891_1559133012_noticia_normal.jpg);  
+			background-repeat: no-repeat;
+			color:black;
+			background-size: 100% 100%;
+			height: 80vh;
+		}
+
+
+		/*card images*/
+		#box_crdimgs_prod img{
+			height: 32vh;
+		}
+
+
+
+		/*--------------imagen flip*/
+
+		.flip-box_cardbox {
+			background-color: transparent;
+			width: auto;
+			height: 198px;
+			
+			perspective: 1000px;
+		}
+
+		.flip-box-inner_card {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		.flip-box_cardbox:hover .flip-box-inner_card {
+			transform: rotateX(180deg);
+		}
+
+		.flip-box-front_img_crd, .flip-box-back_img_crd {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.flip-box-front_img_crd {
+			
+			color: black;
+		}
+
+		.flip-box-back_img_crd {
+			
+			color: white;
+			transform: rotateX(180deg);
+		}
+
+
+		/*-------footer-----------*/
+		footer .redes-sociales {
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			padding: 5px;
+			flex-wrap: wrap;
+		}
+
+		footer .redes-sociales a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: #000;
+			color: #fff;
+			margin:10px;
+			text-align: center;
+			border-radius: 100px;
+			transition: .3s ease all;
+		}
+
+		footer .redes-sociales .twitter {background: #1da1f2;}
+		footer .redes-sociales .facebook {background: #3b5998;}
+		footer .redes-sociales .instagram {background: #c13584;}
+		footer .redes-sociales .whatsapp{background: green }
+
+		footer .redes-sociales a i {
+			font-size: 20px;
+			line-height: 40px;
+		}
+
+		footer .contenedor-icono:hover a {
+			animation: icono .5s ease;
+		}
+
+		@keyframes icono {
+			from {
+				transform: rotate3d(0,0,0,0);
+			}
+			to {
+				transform: rotate3d(0,1,0, 360deg);
+			}
+		}
+
+
+
+		/*galeria d img productos*/
+
+		.cardimgrespon{
+			height: 200px;
+		}
+
+
+		/*texto line*/
+		.tex_line_right {
+			text-align: left;
+			position:relative;
+		}
+		.tex_line_right span {
+			background:#fff  ;
+			z-index:100;
+			font-weight: 300;
+			font-size: 3.4 rem;
+			position:relative;
+			padding:15px;
+		}
+		.tex_line_right::after  {
+			content: '';
+			position: absolute;
+			width:100%;
+			height:2px;
+			left:0px;
+			top:50%;
+			background: #212529;
+			z-index:50;
+		}
+
+		/*texto line*/
+		.tex_line_left {
+			text-align: right;
+			position:relative;
+		}
+		.tex_line_left span {
+			background:#fff;
+			font-weight: 300;
+			font-size: 3.4 rem;
+			z-index:100;
+			position:relative;
+			padding:15px;
+		}
+		.tex_line_left::after  {
+			content: '';
+			position: absolute;
+			width:100%;
+			height:2px;
+			left:0px;
+			top:50%;
+			background: #212529;
+			z-index:50;
+		}
