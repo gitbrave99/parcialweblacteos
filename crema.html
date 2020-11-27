@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crema</title>
+	<link rel="shortcut icon" href="img/Logo1.png"> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/sweetalert2.min.css">
+</head>
+<body>
+	<div class="bg-dark">
+		<div class="container">
+			<!--Navbar -->
+			<nav class="mb-1 navbar navbar-expand-lg navbar-light ">
+				<a class="navbar-brand" href="index.html">
+					<img src="img/Logo1.png" height="40" class="d-inline-block align-top" alt="mdb logo">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ml-auto ">
+						<li class="nav-item active">
+							<a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="quesos.html">Queso</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="crema.html">Crema</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="yogurt.html">Yogurt</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="mantequilla.html">Mantequilla</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="leche.html">Leche</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle img-fluid" height="70px"
+							width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							<i class="fas fa-shopping-cart text-white">
+								<span id="cant_products_shoopping">
+									0
+								</span>
+							</i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item text-danger" href="#" id="vaciar-carrito">Vaciar Carrito</a>
+							<a class="dropdown-item text-primary" href="#" id="procesar-pedido">Procesar
+							Compra</a>
+						</div>
+					</li>
+					<li class="nav-item ">
+						<a href="#sr_barrs" class="nav-link">
+							<i class="fas fa-search text-white"></i>
+						</a>
+					</li>
+					<li class="nav-item dropdown ">
+						<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-user-alt"></i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item"  href="#loginmodal" data-toggle="modal" data-target="#loginmodal">Login</a>
+							<a class="dropdown-item" href="signupmodal" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="container">
+	<div class="text-center">
+		<h1 class="display-4 animate__animated animate__backInLeft ">Crema</h1>
+	</div>
+	<!-- form buscar -->
+	<div class="text-center pt-3 mt-3 animate__animated animate__backInRight" id="search_inp_bar">
+		<form>
+			<div class="form-group row">
+				<div class="col-sm-12 col-md-6 offset-md-3">
+					<input type="text" class="form-control" id="sr_barrs" placeholder="Name product">
+				</div>
+			</div>
+		</form>
+		<!-- <div class="d-flex justify-content-center">
+			
+			<div class="tex-center bg-dark">---
+				<a href="quesos.html" class="btn btn-dark">Quesos</a>
+				<a href="crema.html" class="btn btn-dark">Crema</a>
+				<a href="yogurt.html" class="btn btn-dark">Yogurt</a>
+				<a href="mantequilla.html" class="btn btn-dark">Mantequilla</a>
+				<a href="leche.html" class="btn btn-dark">Leche</a>
+			</div>
+			
+		</div> -->
+	</div>
+	<br>
+	<!------------------------FIN JUMBOTROM------------------------->
+	<br><br>
+	<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4" id="lista-productos">
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<div class="card-body">
+					<img src="https://supercarnes.com/wp-content/uploads/2020/08/MG_8760-600x600.jpg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+					<h5 class="card-title">Crema cultivada bonlac 2lbs</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">8.5</span>
+					</p>
+					<!-- 						  <h1 class="card-title pricing-card-title precio">S/. <span class="">5000</span></h1> -->
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito " data-id="13">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem">
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200919_094331_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de atún con cebolla gourmar</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">3.74</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="14">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200917_091952_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de leche bravo 200ml</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">5.0</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="15">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200917_141943_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de leche para todo uso</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">4.8</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="16">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard" >Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- second row product crema -->
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<div class="card-body">
+					<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200919_093935_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+					<h5 class="card-title">Crema de queso sabor a fresa</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">8.5</span>
+					</p>
+					<!-- 						  <h1 class="card-title pricing-card-title precio">S/. <span class="">5000</span></h1> -->
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito " data-id="17">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem">
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200919_094414_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de salmoón ahumado</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">3.74</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="18">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="https://supercarnes.com/wp-content/uploads/2020/06/20200620_085010_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema dulce dos pinos tradicional</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">5.0</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="19">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200917_142034_clipped_rev_1.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de leche president 200ml</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">4.8</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="20">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard" >Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 		thirn row produ queso -->
+<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="https://supercarnes.com/wp-content/uploads/2020/09/20200917_142010_clipped_rev_11.jpeg" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema de leche president 500ml</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">5.0</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="21">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col mb-4">
+			<div class="card shadow-sm cardimgitem" >
+				<img src="img/crema/Crema_la_gran_pastora.webp" class="card-img-top cardimgrespon img_isted" alt="..." data-toggle="modal" data-target="#md_showmore_products">
+				<div class="card-body">
+					<h5 class="card-title">Crema La gran Pastora 200g</h5>
+					<!-- <p class="card-text">descripcion</p> -->
+					<p class="card-text precio">$
+						<span class="img_pricecard">4.8</span>
+					</p>
+				</div>
+				<div class="d-flex justify-content-around" data-toggle="modal" data-target="#md_showmore_products">
+					<div class="form-group">
+						<a class="btn btn-primary text-white agregar-carrito" data-id="22">
+							Agregar <i class="fas fa-shopping-cart"></i>
+						</a>
+						<a class="btn btn-success text-white comprar_productocard" >Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- FIN ROW COL CARD IMGSPRODUCTS -->
+	</div>
+
+
+	<!-- FIN CONTAINER IMG COL CARDS -->
+</div>
+
+<!--FOOOTER -->
+<div class="bg-dark">
+	<div class="container">
+		<!-- Footer -->
+		<footer class="page-footer font-small stylish-color-dark pt-4">
+
+			<!-- Footer Links -->
+			<div class="container text-center text-md-left">
+
+				<!-- Grid row -->
+				<div class="row">
+
+					<!-- Grid column -->
+					<div class="col-12 col-md-6 mt-md-0 mt-3">
+
+						<!-- Content -->
+						<h5 class="text-uppercase text-center text-light">Ubicación</h5>
+						<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1938.1637113611694!2d-89.2289306!3d13.6986087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63303f2266ced1%3A0x1305fab92194bef3!2sDistribuidora%20del%20Caribe!5e0!3m2!1ses-419!2ssv!4v1598929293075!5m2!1ses-419!2ssv"
+						width="100%" height="175px" frameborder="0" style="border-radius: 4px;" allowfullscreen="" aria-hidden="false" tabindex="0">
+
+					</iframe>
+
+				</div>
+				<!-- Grid column -->
+
+				<hr class="clearfix w-100 d-md-none">
+
+				<!-- Grid column -->
+				<div class="col-12 col-md-2  mb-md-0 mb-3">
+
+					<!-- Links -->
+					<h5 class="text-uppercase text-light">Páginas</h5>
+
+					<ul class="list-unstyled">
+						<li>
+							<a href="quesos.html" class="text-muted">Queso</a>
+						</li>
+						<li>
+							<a href="crema.html" class="text-muted">Crema</a>
+						</li>
+						<li>
+							<a href="yogurt.html" class="text-muted">Yogurt</a>
+						</li>
+						<li>
+							<a href="mantequilla.html" class="text-muted">Mantequilla</a>
+						</li>
+						<li>
+							<a href="leche.html" class="text-muted">Leche</a>
+						</li>
+					</ul>
+
+				</div>
+				<!-- <hr class="clearfix w-100 d-md-none"> -->
+
+				<!-- Grid column -->
+				<div class="col-12 col-md-4 mb-md-0 mb-3">
+
+					<!-- Links -->
+					<h5 class="text-uppercase text-light text-center">Horario</h5>
+
+					<table class="table table-dark">
+						<tbody>
+							<tr>
+								<td>Lunes</td>
+								<td>Viernes</td>
+								<td>8:00 - 8:00</td>
+							</tr>
+							<tr>
+								<td>Sabado</td>
+								<td>Domingo</td>
+								<td>7:00 - 9:00</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+				<!-- Grid row -->
+
+			</div>
+			<!-- Footer Links -->
+
+			<hr>
+
+			<!-- Call to action -->
+			<ul class="list-unstyled list-inline text-center py-2">
+				<li class="list-inline-item">
+					<h5 class="mb-1 text-light">Register for free</h5>
+				</li>
+				<li class="list-inline-item">
+					<a class="btn btn-danger btn-rounded" href="#signupmodal" data-toggle="modal" data-target="#signupmodal" data-dismiss="modal">Sign up!</a>
+				</li>
+			</ul>
+			<hr>
+			<footer class="contenedor">
+				<div class="redes-sociales">
+					<div class="contenedor-icono">
+						<a href="http://www.twitter.com/falconmasters" target="_blank" class="twitter">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</div>
+					<div class="contenedor-icono">
+						<a href="http://www.facebook.com/falconmasters" target="_blank" class="facebook">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</div>
+					<div class="contenedor-icono">
+						<a href="http://www.instagram.com" target="_blank" class="instagram">
+							<i class="fab fa-instagram"></i>
+						</a>
+					</div>
+					<div class="contenedor-icono">
+						<a href="http://www.instagram.com" target="_blank" class="whatsapp">
+							<i class="fab fa-whatsapp"></i>
+						</a>
+					</div>
+				</div>
+			</footer>
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2020 Copyright:
+				<a href="#"> Jorge Gp</a>
+			</div>
+			<!-- Copyright -->
+
+		</footer>
+		<!-- Footer -->
+	</div>
+</div>
+<script type="text/javascript">
+
+</script>
+
+<!-----------------------MODALS----------------------->
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="md_showmore_products" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content" id="modalproductllevar">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_title_product">Producto</h5>
+				<span hidden  id="id_productocard"></span>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 col-lg-6">
+						<img src="" class="card-img" alt="not supported" id="img_modal_show">
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<form action="#" class="form" id="form_compraview">
+							<div class="form-group text-center">
+								<h6  class="text-info text-uppercase">Price $<span id="price_modal_val"></span></h6>
+							</div>											
+							<div class="form-group">
+								<label for="talla_prod">Talla</label>
+								<select class="form-control" id="talla_prod">
+									<option>L</option>
+									<option>S</option>
+									<option>M</option>
+									<option>Xl</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="color_prod">Color</label>
+								<select class="form-control" id="color_prod">
+									<option>Blanco</option>
+									<option>Negro</option>
+									<option>Morado</option>
+									<option>Gris</option>
+								</select>
+							</div>
+							<div class="form-group">
+
+								<div class="form-group row">
+									<div class="col-sm-12 col-md-6">
+										<button class="btn" id="btn_minvalnm">
+											<i class="fas fa-minus"></i>
+										</button>
+										<span id="nm_buyb">1</span>
+										<button class="btn" id="btn_masvalnm">
+											<i class="fas fa-plus"></i>
+										</button>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="d-flex justify-content-start">
+								<div class="form-group">
+									<button class="btn btn-outline-primary" id="addtocar_shoopping">Agregar <i class="fas fa-shopping-cart"></i></button>
+									<button class="btn btn-outline-success" id="mdaddandbuy_now">Comprar</button>
+								</div>
+							</div>
+
+
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+			</div>
+		</div>
+	</div>
+</div>
+
+		<!-- <div class="container">
+			<div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+				<table id="lista-carrito" class="table">
+					<thead>
+						<tr>
+							<th>Imagen</th>
+							<th>Nombre</th>
+							<th>Precio</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+
+				<a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+				<a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+				Compra</a>
+			</div>
+		</div> -->
+
+		<!---MODAL LOGIN-->
+		<div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Login</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="needs-validation p-4" novalidate>
+							<div class="form-row " >
+								<div class="col-md-12 mb-3">
+									<label for="valusername">Username</label>
+									<input type="text" class="form-control" id="valusername" value="Mark" required>
+
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="col-md-12 mb-3">
+									<label for="valpassword">Password</label>
+									<input type="password" class="form-control" id="valpassword" value="Mark" required>
+
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="remenberuserval">
+									<label class="form-check-label" for="remenberuserval">
+										Recordar nombre de usuario
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<button class="btn btn-info  btn-lg btn-block" type="submit">Login</button>
+							</div>
+							<div class="form-group">
+								<label class="form-check-label" for="gridCheck">
+									No tienes cuenta? <a  href="#signupmodal" data-toggle="modal" data-target="#signupmodal" data-dismiss="modal">Sign Up</a>
+								</label>
+							</div>
+						</form>
+
+						<script>
+							(function() {
+								'use strict';
+								window.addEventListener('load', function() {
+									var forms = document.getElementsByClassName('needs-validation');
+									var validation = Array.prototype.filter.call(forms, function(form) {
+										form.addEventListener('submit', function(event) {
+											if (form.checkValidity() === false) {
+												event.preventDefault();
+												event.stopPropagation();
+											}
+											form.classList.add('was-validated');
+										}, false);
+									});
+								}, false);
+							})();
+						</script>
+
+					</div>
+					<div class="modal-footer d-flex justify-content-center">
+							<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button> -->
+
+								<footer class="contenedor">
+									<div class="redes-sociales">
+										<div class="contenedor-icono">
+											<a href="http://www.twitter.com/falconmasters" target="_blank" class="twitter">
+												<i class="fab fa-google"></i>
+											</a>
+										</div>
+										<div class="contenedor-icono">
+											<a href="http://www.facebook.com/falconmasters" target="_blank" class="facebook">
+												<i class="fab fa-facebook-f"></i>
+											</a>
+										</div>
+										<div class="contenedor-icono">
+											<a href="http://www.instagram.com" target="_blank" class="instagram">
+												<i class="fab fa-instagram"></i>
+											</a>
+										</div>
+									</div>
+								</footer>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- modal sign up -->
+				<div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<style>
+									#nettosignup{
+										background-image: url("https://lh3.googleusercontent.com/proxy/SunxWkKY6v_RjQPWzSPBVvBRXTAV3B7Omf1ahqu5t2p_Yhy8p2Y6bl9Rpm_WEkiKP_VT8b-YX5QOd9W4Qta-y8klDYQJOrJDntPQn3pHicfp_XCQKqeljbKh_ktU");
+										background-repeat: no-repeat;
+										background-size: 100% 100%;
+
+									}
+								</style>
+
+								<div class="row no-gutters">
+									<div class="col-md-6">
+										<div class="card-body">
+											<form class="needs-validation " novalidate>
+												<div class="form-group">
+													<!-- <div class="col-md-12 mb-3"> -->
+														<label for="valusernamesp">Username</label>
+														<input type="text" class="form-control" id="valusernamesp" value="Mark" required>
+														<!-- </div> -->
+													</div>
+													<div class="form-group">
+														<!-- <div class="col-md-12 mb-3"> -->
+															<label for="valemailregister">E-mail</label>
+															<input type="email" class="form-control" id="valemailregister"  required>
+															<!-- </div> -->
+														</div>
+														<div class="form-group">
+															<!-- <div class="col-md-12 mb-3"> -->
+																<label for="valpassregiser">Password</label>
+																<input type="password" class="form-control" id="valpassregiser" value="Mark" required>
+																<!-- </div> -->
+															</div>
+															<div class="form-group">
+																<!-- <div class="col-md-12 mb-3"> -->
+																	<label for="valpassregister2">Confirm Password</label>
+																	<input type="password" class="form-control" id="valpassregister2" value="Mark" required>
+																	<!-- </div> -->
+																</div>
+																<div class="form-group">
+																	<button class="btn btn-info  btn-lg btn-block" type="submit">Sign Up</button>
+																</div>
+																<div class="form-group">
+																	<label class="form-check-label" for="gridCheck">
+																		Ya tienes cuenta? <a  href="#loginmodal" data-toggle="modal" data-target="#loginmodal" data-dismiss="modal">Login</a>
+																	</label>
+																</div>
+															</form>
+
+															<script>
+																(function() {
+																	'use strict';
+																	window.addEventListener('load', function() {
+																		var forms = document.getElementsByClassName('needs-validation');
+																		var validation = Array.prototype.filter.call(forms, function(form) {
+																			form.addEventListener('submit', function(event) {
+																				if (form.checkValidity() === false) {
+																					event.preventDefault();
+																					event.stopPropagation();
+																				}
+																				form.classList.add('was-validated');
+																			}, false);
+																		});
+																	}, false);
+																})();
+															</script>
+														</div>
+													</div>
+													<div class="col-md-6 "  id="nettosignup">
+														<div class="row mx-auto  row-cols-md-3 py-5 mt-4 pt-4">
+															<div class="col col-12 col-md-12 mb-4 mt-4">
+																<button class="btn btn-info btn-lg btn-block">Sign Up with Facebook</button>
+															</div>
+
+															<div class="col col-12 col-md-12 mb-4 mt-4">
+																<button class="btn btn-warning btn-lg btn-block">Sign Up with Google</button>
+															</div>
+
+															<div class="col col-12 col-md-12 mb-4 mt-4">
+																<button class="btn btn-danger btn-lg btn-block">Sign Up with Instagram</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+						<!-- 	<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+				</script>
+				<script src="js/filter.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+				</script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+				</script>
+				<!-- <script src="js/modelview.js"></script> -->
+				<!-- <script src="js/formview.js"></script> -->
+				<script src="js/sweetalert2.min.js"></script>   
+				<script src="js/carrito.js"></script>
+				<script src="js/pedido.js"></script>
+				
+			</body>
+			</html>

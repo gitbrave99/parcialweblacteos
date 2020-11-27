@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/Logo1.png"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+<!--     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+
+    <title>Compras</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="bg-dark">
+       <div class="container">
+            <!--Navbar -->
+            <nav class="mb-1 navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo1.png" height="40" class="d-inline-block align-top" alt="mdb logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="quesos.html">Queso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="crema.html">Crema</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="yogurt.html">Yogurt</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="mantequilla.html">Mantequilla</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="leche.html">Leche</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle img-fluid" height="70px"
+                            width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fas fa-shopping-cart text-white">
+                                <span id="cant_products_shoopping">
+                                    0
+                                </span>
+                            </i>
+                        </a>
+                        <div  class="dropdown-menu none" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-danger" href="#" id="vaciar-carrito">Vaciar Carrito</a>
+                            <a class="dropdown-item text-primary" href="#" id="procesar-pedido">Procesar
+                            Compra</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#sr_barrs" class="nav-link">
+                            <i class="fas fa-search text-white"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-alt"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item"  href="#loginmodal" data-toggle="modal" data-target="#loginmodal">Login</a>
+                            <a class="dropdown-item" href="signupmodal" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+</header>
+
+<br>
+
+<section class="container">
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Realizar Compra</h2>
+                    <form id="procesar-pago" action="#" method="post">
+                        <div class="form-group row">
+                            <label for="cliente" class="col-12 col-md-2 col-form-label h2">Cliente :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="cliente"
+                                    placeholder="Ingresa nombre cliente" name="destinatario">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-12 col-md-2 col-form-label h2">Correo :</label>
+                            <div class="col-12 col-md-10">
+                                <input type="text" class="form-control" id="correo" placeholder="Ingresa tu correo" name="cc_to">
+                            </div>
+                        </div>
+
+                        <div id="carrito" class="form-group table-responsive" >
+                            <table class="form-group table" id="lista-compra" >
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody >
+
+                                </tbody>
+
+                                <tfoot>
+                                     <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <p id="subtotal"></p>
+                                    </th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">IVA :</th>
+                                    <th scope="col">
+                                        <p id="igv"></p>
+                                    </th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <input id="total" name="monto" class="font-weight-bold border-0" readonly style="background-color: white;"></input>
+                                    </th>
+                                    
+                                </tr>
+                                </tfoot>
+
+                            </table>
+                        </div>
+
+                        <div class="row justify-content-center" id="loaders">
+                            <img id="cargando" src="img/cargando.gif" width="220">
+                        </div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <a href="index.html" class="btn btn-info btn-block">Seguir comprando</a>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <button href="#" class="btn btn-success btn-block" id="procesar-compra">Realizar compra</button>
+                            </div>
+                        </div>
+
+                        <!-- CONCATENAR DATOS EN INPUT -->
+                            <textarea name="detalleCompra" id="detalleCompra" cols="50" rows="10" hidden></textarea>
+                        
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="js/filter.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+<script src="js/sweetalert2.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<!-- <script src="js/modelview.js"></script>
+<script src="js/formview.js"></script> -->
+<script src="js/carrito.js"></script>
+<script src="js/compra.js"></script>
+
+
+</body>
+
+</html>
