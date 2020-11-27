@@ -263,18 +263,19 @@ procesarPedido(e){
 //Calcular montos
 calcularTotal(){
     let productosLS;
-    let total = 0, iva = 0, subtotal = 0;
+    let total = 0, iva = 0, subtotal = 0, total_final=0;
     productosLS = this.obtenerProductosLocalStorage();
     for(let i = 0; i < productosLS.length; i++){
         let element = Number(productosLS[i].precio * productosLS[i].cantidad);
         total = total + element;
     }
     iva = parseFloat(total * 0.13).toFixed(2);
-    subtotal = parseFloat(total-iva).toFixed(2);
+    subtotal = parseFloat(total).toFixed(2);
+    total_final=parseFloat(subtotal)+parseFloat(iva);
 
     document.getElementById('subtotal').innerHTML = "$ " + subtotal;
     document.getElementById('igv').innerHTML = "$ " + iva;
-    document.getElementById('total').value = "$ " + total.toFixed(2);
+    document.getElementById('total').value = "$ " + total_final;
 }
 
 obtenerEvento(e) {
